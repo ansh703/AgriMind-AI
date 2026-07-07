@@ -1,1 +1,33 @@
-console.log("AgriMind AI Started");
+// Smooth scroll for navigation
+
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+
+        if(this.getAttribute('href').startsWith("#")){
+
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href'))
+            .scrollIntoView({
+                behavior:'smooth'
+            });
+
+        }
+
+    });
+});
+
+
+// Launch Dashboard Button
+
+const btn=document.querySelector("button");
+
+btn.addEventListener("click",()=>{
+
+document.querySelector("#dashboard").scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+});

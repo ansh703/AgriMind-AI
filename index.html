@@ -2,16 +2,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgriMind AI</title>
 
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>AgriMind AI</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+
+<!-- ================= NAVBAR ================= -->
 
 <nav>
 
@@ -21,9 +26,11 @@
 
 <ul>
 
-<li><a href="#">Home</a></li>
+<li><a href="#home">Home</a></li>
 
-<li><a href="#">Dashboard</a></li>
+<li><a href="#dashboard">Dashboard</a></li>
+
+<li><a href="#analytics">Analytics</a></li>
 
 <li><a href="#">Digital Twin</a></li>
 
@@ -37,7 +44,10 @@
 
 </nav>
 
-<section class="hero"> 
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
 <div class="stats">
 
 <div class="card">
@@ -64,13 +74,9 @@
 
 </div>
 
-</div>    
+</div>
 
-<h1>
-
-AI Powered Agriculture
-
-</h1>
+<h1>AI Powered Agriculture</h1>
 
 <p>
 
@@ -79,6 +85,15 @@ Smart Farming using AI, IoT, Satellite Data and Digital Twin Technology
 </p>
 
 <button>
+
+Launch Dashboard
+
+</button>
+
+</section>
+
+<!-- ================= DASHBOARD ================= -->
+
 <section id="dashboard" class="dashboard">
 
 <h2>AI Dashboard</h2>
@@ -86,73 +101,118 @@ Smart Farming using AI, IoT, Satellite Data and Digital Twin Technology
 <div class="cards">
 
 <div class="card">
+
 <h3>🌾 Soil Moisture</h3>
+
 <p>72%</p>
+
 </div>
 
 <div class="card">
+
 <h3>🌡 Temperature</h3>
+
 <p>31°C</p>
+
 </div>
 
 <div class="card">
+
 <h3>💧 Humidity</h3>
+
 <p>68%</p>
+
 </div>
 
 <div class="card">
+
 <h3>🛰 Satellite Status</h3>
+
 <p>Connected</p>
+
 </div>
 
 <div class="card">
+
 <h3>🚜 Farm Health</h3>
+
 <p>Excellent</p>
+
 </div>
 
 <div class="card">
+
 <h3>🤖 AI Recommendation</h3>
+
 <p>Irrigate after 3 Hours</p>
-</div>
 
 </div>
 
-</section>Launch Dashboard
-
-</button>
+</div>
 
 </section>
-    <section id="analytics" class="analytics">
+
+<!-- ================= ANALYTICS ================= -->
+
+<section id="analytics" class="analytics">
 
 <h2>AI Analytics</h2>
 
 <div class="analytics-grid">
 
 <div class="analytics-card">
+
 <h3>💧 Water Usage</h3>
-<div class="chart-placeholder">72%</div>
+
+<div class="chart-placeholder">
+
+72%
+
+</div>
+
 </div>
 
 <div class="analytics-card">
+
 <h3>🌡 Temperature Trend</h3>
-<div class="chart-placeholder">31°C</div>
+
+<div class="chart-placeholder">
+
+31°C
+
+</div>
+
 </div>
 
 <div class="analytics-card">
+
 <h3>🌾 Crop Health Score</h3>
-<div class="chart-placeholder">98%</div>
+
+<div class="chart-placeholder">
+
+98%
+
+</div>
+
 </div>
 
 <div class="analytics-card">
+
 <h3>🛰 Satellite Coverage</h3>
-<div class="chart-placeholder">Online</div>
+
+<div class="chart-placeholder">
+
+ONLINE
+
+</div>
+
 </div>
 
 </div>
 
 </section>
+
 <script src="script.js"></script>
-    
 
 </body>
 

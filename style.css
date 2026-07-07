@@ -173,4 +173,52 @@ button:hover{
 
 box-shadow:0 20px 80px #00ff88;
 
+}.stats{
+
+display:flex;
+
+gap:40px;
+
+margin-top:70px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.08);
+
+padding:30px;
+
+border-radius:20px;
+
+backdrop-filter:blur(20px);
+
+width:220px;
+
+text-align:center;
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+background:#0f3324;
+
+}
+
+.card h2{
+
+font-size:42px;
+
+color:#57ff9a;
+
+margin-bottom:10px;
+
 }

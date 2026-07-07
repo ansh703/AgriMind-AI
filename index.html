@@ -1,76 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>AgriMind-AI Dashboard</title>
-<style>
-body{
-    font-family:Arial,sans-serif;
-    background:#e8f5e9;
-    margin:0;
-    padding:40px;
-}
-.container{
-    max-width:700px;
-    margin:auto;
-    text-align:center;
-}
-.card{
-    background:white;
-    padding:20px;
-    margin:20px 0;
-    border-radius:12px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.15);
-}
-button{
-    padding:12px 24px;
-    border:none;
-    border-radius:8px;
-    margin:10px;
-    font-size:16px;
-    cursor:pointer;
-}
-.on{
-    background:#28a745;
-    color:white;
-}
-.off{
-    background:#dc3545;
-    color:white;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriMind AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="container">
+<nav>
 
-<h1>🌱 AgriMind-AI</h1>
-<h2>Smart Agriculture Dashboard</h2>
-
-<div class="card">
-<h3>🌡️ Temperature</h3>
-<h1>28°C</h1>
+<div class="logo">
+🌱 AgriMind AI
 </div>
 
-<div class="card">
-<h3>💧 Soil Moisture</h3>
-<h1>65%</h1>
-</div>
-<div class="card">
-<h3>💨 Humidity</h3>
-<h1>72%</h1>
-</div>
+<ul>
 
-<div class="card">
-<h3>🚰 Water Pump</h3>
+<li><a href="#">Home</a></li>
 
-<button class="on" onclick="alert('Pump Turned ON')">Turn ON Pump</button>
+<li><a href="#">Dashboard</a></li>
 
-<button class="off" onclick="alert('Pump Turned OFF')">Turn OFF Pump</button>
+<li><a href="#">Digital Twin</a></li>
 
-</div>
+<li><a href="#">Weather</a></li>
 
-</div>
+<li><a href="#">Market</a></li>
+
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<h1>
+
+AI Powered Agriculture
+
+</h1>
+
+<p>
+
+Smart Farming using AI, IoT, Satellite Data and Digital Twin Technology
+
+</p>
+
+<button>
+
+Launch Dashboard
+
+</button>
+
+</section>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>

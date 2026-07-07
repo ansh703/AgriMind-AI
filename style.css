@@ -265,4 +265,26 @@ flex-wrap:wrap;
 justify-content:center;
 }
 
+}...
+@media(max-width:700px){
+
+}
+
+
+
+
+
+
+/* WEATHER */
+
+.weather{
+...
+}
+
+.weather-grid{
+...
+}
+
+.weather-card{
+...
 }

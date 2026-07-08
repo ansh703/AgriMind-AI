@@ -22,13 +22,14 @@ document.querySelectorAll('nav a').forEach(link => {
 
 // Launch Dashboard Button
 
+
 const btn = document.querySelector(".btn");
-btn.addEventListener("click",()=>{
 
-document.querySelector("#dashboard").scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-});
+if (btn) {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    document.querySelector("#dashboard").scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+}

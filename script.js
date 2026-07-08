@@ -22,7 +22,6 @@ document.querySelectorAll('nav a').forEach(link => {
 
 // Launch Dashboard Button
 
-
 const btn = document.querySelector(".btn");
 
 if (btn) {

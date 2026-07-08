@@ -1,4 +1,6 @@
-// Smooth scroll for navigation
+import { db } from "./firebase.js";
+
+console.log("Firebase connected successfully!", db);// Smooth scroll for navigation
 
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', function(e) {

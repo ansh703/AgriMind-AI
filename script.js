@@ -22,8 +22,7 @@ document.querySelectorAll('nav a').forEach(link => {
 
 // Launch Dashboard Button
 
-const btn=document.querySelector("button");
-
+const btn = document.querySelector(".btn");
 btn.addEventListener("click",()=>{
 
 document.querySelector("#dashboard").scrollIntoView({

@@ -10,12 +10,11 @@ onAuthStateChanged(auth, (user) => {
 
 console.log("Firebase connected successfully!", db);
 
-// Smooth scroll for navigation
+// Smooth scroll
 document.querySelectorAll("nav a").forEach((link) => {
   link.addEventListener("click", function (e) {
     if (this.getAttribute("href").startsWith("#")) {
       e.preventDefault();
-
       document.querySelector(this.getAttribute("href")).scrollIntoView({
         behavior: "smooth",
       });
@@ -23,7 +22,7 @@ document.querySelectorAll("nav a").forEach((link) => {
   });
 });
 
-// Launch Dashboard Button
+// Dashboard button
 const btn = document.querySelector(".btn");
 
 if (btn) {
@@ -35,16 +34,16 @@ if (btn) {
   });
 }
 
-// ================= WEATHER =================
-
+// Weather
 const API_KEY = "2593969b2bda90149a077bf597ee0d32";
 const CITY = "Nagpur";
 
 async function getWeather() {
   try {
     const response = await fetch(
-  https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric
-);
+      `https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric
+    );
+
     const data = await response.json();
 
     console.log(data);
@@ -54,6 +53,7 @@ async function getWeather() {
 
     document.getElementById("humidity").textContent =
       data.main.humidity + "%";
+
   } catch (error) {
     console.error("Weather Error:", error);
   }

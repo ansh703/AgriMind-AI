@@ -43,10 +43,9 @@ const CITY = "Nagpur"; // Change this to your city if you want
 
 async function getWeather() {
   try {
-    const response = await fetch(
-      https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric
-    );
-
+     const response = await fetch(
+  https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric
+);
     const data = await response.json();
 
     document.getElementById("temperature").textContent =

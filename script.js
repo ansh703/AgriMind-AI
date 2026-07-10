@@ -75,3 +75,19 @@ async function getWeather() {
 }
 
 getWeather();
+
+const askButton = document.getElementById("askAI");
+
+if (askButton) {
+  askButton.addEventListener("click", async () => {
+    const prompt = document.getElementById("userPrompt").value;
+    const responseBox = document.getElementById("aiResponse");
+
+    if (!prompt) {
+      responseBox.textContent = "Please enter a question.";
+      return;
+    }
+
+    responseBox.textContent = "Thinking...";
+  });
+}

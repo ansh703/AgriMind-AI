@@ -41,40 +41,32 @@ const CITY = "Nagpur";
 async function getWeather() {
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`
-    );
+     `https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`
+      );
 
     const data = await response.json();
 
     console.log(data);
 
-    // Temperature
     const temperature = document.getElementById("temperature");
     if (temperature) {
       temperature.textContent = data.main.temp + "°C";
     }
 
-    // Humidity
     const humidity = document.getElementById("humidity");
     if (humidity) {
       humidity.textContent = data.main.humidity + "%";
     }
 
-    // AI Crop Recommendation
     const cropRecommendation = document.getElementById("cropRecommendation");
-
     if (cropRecommendation) {
-      let crop;
-
       if (data.main.temp >= 25 && data.main.humidity >= 60) {
-        crop = "🌾 Rice";
+        cropRecommendation.textContent = "🌾 Rice";
       } else if (data.main.temp >= 20) {
-        crop = "🌽 Maize";
+        cropRecommendation.textContent = "🌽 Maize";
       } else {
-        crop = "🌱 Wheat";
+        cropRecommendation.textContent = "🌱 Wheat";
       }
-
-      cropRecommendation.textContent = crop;
     }
 
   } catch (error) {

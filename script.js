@@ -34,7 +34,7 @@ if (btn) {
   });
 }
 
-// Weather
+// Weather API
 const API_KEY = "2593969b2bda90149a077bf597ee0d32";
 const CITY = "Nagpur";
 
@@ -48,17 +48,23 @@ async function getWeather() {
 
     console.log(data);
 
-    document.getElementById("temperature").textContent =
-      data.main.temp + "°C";
+    // Temperature
+    const temperature = document.getElementById("temperature");
+    if (temperature) {
+      temperature.textContent = data.main.temp + "°C";
+    }
 
-    document.getElementById("humidity").textContent =
-      data.main.humidity + "%";
+    // Humidity
+    const humidity = document.getElementById("humidity");
+    if (humidity) {
+      humidity.textContent = data.main.humidity + "%";
+    }
 
     // AI Crop Recommendation
-    const cropElement = document.getElementById("cropRecommendation");
+    const cropRecommendation = document.getElementById("cropRecommendation");
 
-    if (cropElement) {
-      let crop = "";
+    if (cropRecommendation) {
+      let crop;
 
       if (data.main.temp >= 25 && data.main.humidity >= 60) {
         crop = "🌾 Rice";
@@ -68,7 +74,7 @@ async function getWeather() {
         crop = "🌱 Wheat";
       }
 
-      cropElement.textContent = crop;
+      cropRecommendation.textContent = crop;
     }
 
   } catch (error) {

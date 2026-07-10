@@ -41,7 +41,7 @@ const CITY = "Nagpur";
 async function getWeather() {
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`
+      https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric
     );
 
     const data = await response.json();
@@ -53,6 +53,23 @@ async function getWeather() {
 
     document.getElementById("humidity").textContent =
       data.main.humidity + "%";
+
+    // AI Crop Recommendation
+    const cropElement = document.getElementById("cropRecommendation");
+
+    if (cropElement) {
+      let crop = "";
+
+      if (data.main.temp >= 25 && data.main.humidity >= 60) {
+        crop = "🌾 Rice";
+      } else if (data.main.temp >= 20) {
+        crop = "🌽 Maize";
+      } else {
+        crop = "🌱 Wheat";
+      }
+
+      cropElement.textContent = crop;
+    }
 
   } catch (error) {
     console.error("Weather Error:", error);

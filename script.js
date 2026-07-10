@@ -41,24 +41,19 @@ const CITY = "Nagpur";
 async function getWeather() {
   try {
     const response = await fetch(
-     `https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`
-      );
+      https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric
+    );
 
     const data = await response.json();
 
-    console.log(data);
+    document.getElementById("temperature").textContent =
+      data.main.temp + "°C";
 
-    const temperature = document.getElementById("temperature");
-    if (temperature) {
-      temperature.textContent = data.main.temp + "°C";
-    }
-
-    const humidity = document.getElementById("humidity");
-    if (humidity) {
-      humidity.textContent = data.main.humidity + "%";
-    }
+    document.getElementById("humidity").textContent =
+      data.main.humidity + "%";
 
     const cropRecommendation = document.getElementById("cropRecommendation");
+
     if (cropRecommendation) {
       if (data.main.temp >= 25 && data.main.humidity >= 60) {
         cropRecommendation.textContent = "🌾 Rice";
@@ -68,7 +63,6 @@ async function getWeather() {
         cropRecommendation.textContent = "🌱 Wheat";
       }
     }
-
   } catch (error) {
     console.error("Weather Error:", error);
   }
@@ -76,44 +70,20 @@ async function getWeather() {
 
 getWeather();
 
+// Chatbot (temporary)
 const askButton = document.getElementById("askAI");
 
 if (askButton) {
-  askButton.addEventListener("click", async () => {
+  askButton.addEventListener("click", () => {
     const prompt = document.getElementById("userPrompt").value;
     const responseBox = document.getElementById("aiResponse");
 
-    if (!prompt) {
+    if (!prompt.trim()) {
       responseBox.textContent = "Please enter a question.";
       return;
     }
-const GEMINI_API_KEY = ";
 
-const response = await fetch(
-  https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY},
-  {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      contents: [
-        {
-          parts: [
-            {
-              text: prompt,
-            },
-          ],
-        },
-      ],
-    }),
-  }
-);
-
-const result = await response.json();
-
-responseBox.textContent =
-  result.candidates?.[0]?.content?.parts?.[0]?.text ||
-  "No response from AI.";
-});
+    responseBox.textContent =
+      "🤖 AI chatbot is coming soon. We will connect Gemini securely in the next step.";
+  });
 }
